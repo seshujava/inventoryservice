@@ -31,7 +31,7 @@ public class ItemServiceImpl implements ItemService{
 			if(!CollectionUtils.isEmpty(findByItemId)) {
 				return findByItemId;
 			}else {
-				throw new MyResourceNotFoundException("Invalid Item ID");
+				throw new MyResourceNotFoundException("Invalid Item");
 			}
 		}else {
 			return null;
