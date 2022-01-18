@@ -26,7 +26,7 @@ public class ItemServiceImpl implements ItemService{
 
 	public List<ItemsSupplied> getByItem(String item){
 		Items items=itemRepo.findByItemName(item);
-		if(items != null){ 
+		if(items != null){
 			List<ItemsSupplied> findByItemId = itemsSuppliedRepo.findByItemId(items.getItemId());
 			if(!CollectionUtils.isEmpty(findByItemId)) {
 				return findByItemId;
